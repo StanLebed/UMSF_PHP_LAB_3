@@ -27,7 +27,7 @@ if(empty($_SESSION['name']))
 
 if ($_SESSION['role']!='admin')
 {
-	header ("Location: ../ERROR_403.php");
+	header ("Location: ../errors/ERROR_403.php");
 }
 
 if(!empty($_POST["select_lang"]))
@@ -36,5 +36,12 @@ if(!empty($_POST["select_lang"]))
 }
 
 require "../vendor/change_language.php";
+
+if (!empty($_SESSION['message']))
+{
+	echo '<p class="msg">' .$_SESSION['message']. '</p>';
+	unset($_SESSION['message']);
+}
+
 require "../crud/read_userlist.php";
 ?>
