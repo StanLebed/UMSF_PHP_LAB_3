@@ -19,6 +19,8 @@ require_once "../vendor/connect.php";
 				<th>Surname</th>
 				<th>Role</th>
 				<th>Language</th>
+				<th>Edit</th>
+				<th>Delete</th>
 			</tr>
 			<?php  
 			$users = mysqli_query($connect, "SELECT * FROM `users`");
@@ -39,6 +41,8 @@ require_once "../vendor/connect.php";
 					<td><?= $user['surname'] ?></td>
 					<td><?= $user['role'] ?></td>
 					<td><?= $user['language'] ?></td>
+					<td><a href="../vendor/update_page.php?id=<?=$user['id']?>"><img src="../img/icons/edit.png" alt="Изменить" style="width: 20px; height: 20px;"></a></td>
+					<td><a href="delete_user.php"><img src="../img/icons/delete.png" alt="Удалить" style="width: 20px; height: 20px;"></a></td>
 				</tr>
 				<?php 
 			}
