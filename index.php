@@ -16,6 +16,7 @@ if(!empty($_SESSION['name']))
 <body>
 	<div class="wrapper">
 		<h1>Какой-то непонятный сайт</h1>
+		<h2 class="signup_title">Авторизация</h2>
 		<div class="loginForm">
 			<form action="vendor/login.php" method="POST">
 				<p class="loginForm_text">Введите логин и пароль пользователя</p>
@@ -24,6 +25,9 @@ if(!empty($_SESSION['name']))
 				<p>ПАРОЛЬ</p>
 				<input class="loginForm_inp" name="password"  type = 'password'> <br>
 				<input type='submit' name="submit" value="LOGIN" class="button loginForm_btn">
+				<p class="signup_link">
+					У Вас нет аккаунта? — <a href="vendor/signup.php">зарегистрируйтесь</a>!
+				</p>
 			</form>
 				<?php
 				if (!empty($_SESSION['message']))
