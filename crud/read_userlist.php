@@ -42,7 +42,7 @@ require_once "../vendor/connect.php";
 					<td><?= $user['role'] ?></td>
 					<td><?= $user['language'] ?></td>
 					<td><a href="../vendor/update_page.php?id=<?=$user['id']?>"><img src="../img/icons/edit.png" alt="Изменить" style="width: 20px; height: 20px;"></a></td>
-					<td><a href="delete_user.php"><img src="../img/icons/delete.png" alt="Удалить" style="width: 20px; height: 20px;"></a></td>
+					<td><a href="../crud/delete_user.php?id=<?=$user['id']?>&login=<?=$user['login']?>"><img src="../img/icons/delete.png" alt="Удалить" style="width: 20px; height: 20px;"></a></td>
 				</tr>
 				<?php 
 			}
