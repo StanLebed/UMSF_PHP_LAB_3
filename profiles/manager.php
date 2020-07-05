@@ -30,8 +30,9 @@ if(!empty($_POST["select_lang"]))
 
 if ($_SESSION['role']=='client')
 {
-	header ("Location: ../ERROR_403.php");
+	header ("Location: ../errors/ERROR_403.php");
 }
 
 require "../vendor/change_language.php";
+require "../crud/read_userlist.php";
 ?>
