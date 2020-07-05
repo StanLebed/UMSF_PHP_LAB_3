@@ -18,6 +18,13 @@ h1 {
 	margin-bottom: 30px;
 }
 
+h2 {
+	margin-top: 100px;
+	text-align: center;
+	font-size: 28px;
+	color: #ca8afc;
+}
+
 .loginForm {
 	margin: 60px auto;
 	border: 5px solid #ca8afc;
@@ -113,10 +120,28 @@ h1 {
 	right: 100px;
 }
 
-.l200{
+.l200 {
 	left: 200px;
 }
 
-.d_none{
+.d_none {
 	display: none;
+}
+
+table {
+	text-align: center;
+	border: 2px solid #ca8afc;
+}
+td, th {
+	padding: 20px;
+}
+.userlist {
+	margin: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.userlist_title {
+	background: #ca8afc;
+	color: white;
 }
