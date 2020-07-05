@@ -16,7 +16,7 @@ $user = mysqli_fetch_assoc($user);
 	<h2>Редактирование пользователя</h2>
 	<div class="update_form">
 		<form action="../crud/update_user.php" method="POST">
-			<input type="hidden" name="id" value="$user['id']">
+			<input type="hidden" name="id" value="<?=$user['id']?>">
 			<input type="text" name="login" value="<?= $user['login']?>">
 			<input type="text" name="password" value="<?= $user['password']?>">
 			<input type="text" name="name" value="<?= $user['name']?>">
